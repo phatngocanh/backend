@@ -77,6 +77,9 @@ func (s *invoiceService) GenerateInvoicePDF(request model.GenerateInvoiceRequest
 	if request.CustomerPhone != "" {
 		pdf.CellFormat(0, 5, fmt.Sprintf("SĐT: %s", request.CustomerPhone), "", 1, "L", false, 0, "")
 	}
+	if request.CustomerAddress != "" {
+		pdf.CellFormat(0, 5, fmt.Sprintf("Địa chỉ: %s", request.CustomerAddress), "", 1, "L", false, 0, "")
+	}
 	pdf.Ln(2)
 
 	// Calculate optimal column widths for A5 paper
@@ -135,6 +138,18 @@ func (s *invoiceService) GenerateInvoicePDF(request model.GenerateInvoiceRequest
 	pdf.CellFormat(colWidths[2], 6, fmt.Sprintf("%d", request.TotalPackages), "1", 0, "C", false, 0, "")
 	pdf.CellFormat(colWidths[3], 6, "", "1", 0, "C", false, 0, "")
 	pdf.CellFormat(colWidths[4], 6, fmt.Sprintf("%d", request.TotalUnits), "1", 1, "C", false, 0, "")
+
+	// Add signature fields
+	pdf.Ln(15) // Add more space before signatures
+	pdf.SetFont("DejaVu", "", 9)
+
+	// Left signature (Người xuất đơn)
+	pdf.SetX(20)
+	pdf.CellFormat(50, 5, "Người xuất đơn", "", 0, "C", false, 0, "")
+
+	// Right signature (Người nhận đơn)
+	pdf.SetX(80)
+	pdf.CellFormat(50, 5, "Người nhận đơn", "", 0, "C", false, 0, "")
 
 	// Return PDF as bytes
 	var buf bytes.Buffer

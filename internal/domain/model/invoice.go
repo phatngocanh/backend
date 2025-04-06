@@ -8,11 +8,12 @@ type InvoiceItem struct {
 }
 
 type GenerateInvoiceRequest struct {
-	CustomerName  string        `json:"customerName"`
-	CustomerPhone string        `json:"customerPhone"`
-	InvoiceDate   string        `json:"invoiceDate"`
-	InvoiceCode   string        `json:"invoiceCode"`
-	Items         []InvoiceItem `json:"items"`
-	TotalPackages int           `json:"totalPackages"`
-	TotalUnits    int           `json:"totalUnits"`
+	CustomerName    string        `json:"customerName"`
+	CustomerPhone   string        `json:"customerPhone"`
+	CustomerAddress string        `json:"customerAddress"`
+	InvoiceDate     string        `json:"invoiceDate"`
+	InvoiceCode     string        `json:"invoiceCode"`
+	Items           []InvoiceItem `json:"items"`
+	TotalPackages   int           `json:"totalPackages"`
+	TotalUnits      int           `json:"totalUnits"`
 }
