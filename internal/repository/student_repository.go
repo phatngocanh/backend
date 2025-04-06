@@ -2,7 +2,8 @@ package repository
 
 import (
 	"context"
-	"github.com/VuKhoa23/advanced-web-be/internal/domain/entity"
+
+	"github.com/phat-ngoc-anh/backend/internal/domain/entity"
 )
 
 type StudentRepository interface {

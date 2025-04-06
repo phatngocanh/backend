@@ -2,9 +2,10 @@ package serviceimplement
 
 import (
 	"context"
-	"github.com/VuKhoa23/advanced-web-be/internal/domain/model"
-	"github.com/VuKhoa23/advanced-web-be/internal/repository"
-	"github.com/VuKhoa23/advanced-web-be/internal/service"
+
+	"github.com/phat-ngoc-anh/backend/internal/domain/model"
+	"github.com/phat-ngoc-anh/backend/internal/repository"
+	"github.com/phat-ngoc-anh/backend/internal/service"
 )
 
 type StudentService struct {

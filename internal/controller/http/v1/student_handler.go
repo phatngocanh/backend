@@ -1,8 +1,8 @@
 package v1
 
 import (
-	"github.com/VuKhoa23/advanced-web-be/internal/service"
 	"github.com/gin-gonic/gin"
+	"github.com/phat-ngoc-anh/backend/internal/service"
 )
 
 type StudentHandler struct {

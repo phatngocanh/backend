@@ -1,9 +1,9 @@
 package startup
 
 import (
-	"github.com/VuKhoa23/advanced-web-be/internal"
-	"github.com/VuKhoa23/advanced-web-be/internal/controller"
-	"github.com/VuKhoa23/advanced-web-be/internal/database"
+	"github.com/phat-ngoc-anh/backend/internal"
+	"github.com/phat-ngoc-anh/backend/internal/controller"
+	"github.com/phat-ngoc-anh/backend/internal/database"
 )
 
 func registerDependencies() *controller.ApiContainer {

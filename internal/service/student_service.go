@@ -2,7 +2,8 @@ package service
 
 import (
 	"context"
-	"github.com/VuKhoa23/advanced-web-be/internal/domain/model"
+
+	"github.com/phat-ngoc-anh/backend/internal/domain/model"
 )
 
 type StudentService interface {
