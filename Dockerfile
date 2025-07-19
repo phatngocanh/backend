@@ -32,11 +32,5 @@ WORKDIR /app
 COPY --from=builder /app/main .
 COPY --from=builder /app/internal/asset ./internal/asset
 
-# Copy environment template
-COPY .env .env
-
-# Expose port
-EXPOSE 8080
-
 # Run the application
 CMD ["./main"] 
